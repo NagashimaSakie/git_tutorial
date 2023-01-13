@@ -30,15 +30,33 @@ $
         editor = code --wait
 
 
-ローカルリポジトリの作成
+### ローカルリポジトリの作成
 git init
 
-ステージング
+### ステージング
 git add .
 
-コミット
+### コミット
 git commit -v
 git commit -m "メッセージ（要点、理由）"
 
+### 変更状況
+git status
 
+### 変更差分
+git diff
+git addした後は
+git diff --staged
 
+### 変更履歴
+git log
+git log oneline
+git log -p index.html
+git log -n [コミット数]
+
+ファイル削除
+git rm ファイル名
+git rm -r ディレクトリ名
+
+ファイルを残してgitから削除
+git rm --cached ファイル名
