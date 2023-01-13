@@ -33,5 +33,14 @@ $
 ローカルリポジトリの作成
 git init
 
+ステージング
+git add .
+
+コミット
+git commit -v
+git commit -m "メッセージ（要点、理由）"
+
+
+
 
 
