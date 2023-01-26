@@ -87,6 +87,15 @@ git remote -v
 フェッチはローカルリポジトリに反映
 git fetch [リモート名]
 
+リモートから情報を取得してマージする
+git pull [リモート名] [ブランチ名]
+
+### リモートの情報表示
+git remote show [リモート名]
+
+### リモートの変更・削除
+git remote rename [旧リモート名] [新リモート名]
+git remote rm [リモート名]
 
 ### ブランチ
 並行して複数機能を開発するためにある
@@ -103,3 +112,12 @@ git branch -a
 git checkout [既存ブランチ名]
 ブランチを新規作成して切り替え
 git checkout -b [新規ブランチ名]
+
+### ブランチ名変更（今いるブランチ）
+git branch -m [新ブランチ名]
+
+### ブランチ削除
+git branch -d [ブランチ名]
+※masterにマージされていない変更が残っている場合削除しない
+強制削除は以下
+git branch -D [ブランチ名]
