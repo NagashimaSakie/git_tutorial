@@ -31,6 +31,8 @@ git log
 git log --oneline
 git log -p index.html
 git log -n [コミット数]
+どのブランチがどのコミットを指すかみる
+git log --oneline --decorate
 
 ### ファイル削除
 git rm ファイル名
@@ -63,3 +65,42 @@ git push -u origin master
 ### エイリアス
 git config --global alias.ci commit
 git config --global alias.[エイリアス名] [コマンド]
+
+### ファイル変更取り消し
+git checkout -- [ファイル名]
+git checkout -- [ディレクトリ名]
+git checkout -- .
+
+### ステージの内容をリポジトリの最新と同期する
+git reset HEAD [ファイル名]
+git reset HEAD [ディレクトリ名]
+
+### 直前のコミットをやり直す
+git commit --amend
+リモートリポジトリにPushしたコミットはやり直したらダメ
+
+### リモートを表示する(-vでURLも表示)
+git remote
+git remote -v
+
+### フェッチとプッシュ
+フェッチはローカルリポジトリに反映
+git fetch [リモート名]
+
+
+### ブランチ
+並行して複数機能を開発するためにある
+コミットを指すポインタ　スナップショットを切り替える
+ブランチの作成、切り替え、マージがバージョン管理ツールより高速
+
+git branch [ブランチ名]
+一覧表示
+git branch
+すべて
+git branch -a
+
+### ブランチ切り替え
+git checkout [既存ブランチ名]
+ブランチを新規作成して切り替え
+git checkout -b [新規ブランチ名]
+
