@@ -26,7 +26,7 @@ git diff
 git addした後は
 git diff --staged
 
-### 変更履歴
+### 変更履歴 qで終了
 git log
 git log --oneline
 git log -p index.html
