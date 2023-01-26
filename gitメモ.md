@@ -78,6 +78,16 @@ git reset HEAD [ディレクトリ名]
 ### 直前のコミットをやり直す
 git commit --amend
 リモートリポジトリにPushしたコミットはやり直したらダメ
+### 複数コミットをやり直す
+git rebase -i [コミットID]
+git rebase -i HEAD~3
+HEAD~n :1番目の親を指定する。HEADを起点としてn数値分の親コミットまで指定
+HEAD^n :マージした場合のn番目の親を指定
+修正したいところをpickからeditに修正し、以下のコマンドを入力
+git commit --amend (修正コマンド)
+git rebase --continue (次へ)
+
+
 
 ### リモートを表示する(-vでURLも表示)
 git remote
@@ -87,8 +97,15 @@ git remote -v
 フェッチはローカルリポジトリに反映
 git fetch [リモート名]
 
-リモートから情報を取得してマージする
+### リモートから情報を取得してマージする
 git pull [リモート名] [ブランチ名]
+リベース型(merge commitが残らない)
+git pull --rebase [リモート名] [ブランチ名]
+
+### プルのリベース型設定
+git config --global pull.rebase true
+masterブランチのみ
+git config branch.master.rebase true
 
 ### リモートの情報表示
 git remote show [リモート名]
