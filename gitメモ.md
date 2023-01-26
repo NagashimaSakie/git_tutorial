@@ -121,3 +121,10 @@ git branch -d [ブランチ名]
 ※masterにマージされていない変更が残っている場合削除しない
 強制削除は以下
 git branch -D [ブランチ名]
+
+### リベース（コミット履歴を一直線にする）
+featureとmasterを一直線にする
+git checkout [枝分かれしているブランチ名(feature)]
+git rebase [親コミットにしたいブランチ名(master)]
+git checkout [親コミットにしたいブランチ名(master)]
+git merge [枝分かれしているブランチ名(feature)] >>>fast forwardになる
