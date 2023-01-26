@@ -145,3 +145,22 @@ git checkout [枝分かれしているブランチ名(feature)]
 git rebase [親コミットにしたいブランチ名(master)]
 git checkout [親コミットにしたいブランチ名(master)]
 git merge [枝分かれしているブランチ名(feature)] >>>fast forwardになる
+
+### タグ表示
+git tag -l "[パターン]"
+
+###　タグ作成
+・注釈付き版（annotated）
+git tag -a [タグ名] -m "[メッセージ]"
+
+・軽量版（lightweight）
+git tag [タグ名]
+後からタグ付け
+git tag [タグ名] [コミット名]
+
+### タグの情報表示
+git show [タグ名]
+
+### タグ送信
+git push [リモート名] [タグ名]
+git push origin --tags
