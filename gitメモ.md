@@ -103,3 +103,13 @@ git branch -a
 git checkout [既存ブランチ名]
 ブランチを新規作成して切り替え
 git checkout -b [新規ブランチ名]
+
+### ブランチ名変更（今いるブランチ）
+git branch -m [新ブランチ名]
+
+### ブランチ削除
+git branch -d [ブランチ名]
+※masterにマージされていない変更が残っている場合削除しない
+強制削除は以下
+git branch -D [ブランチ名]
+
