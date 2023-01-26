@@ -164,3 +164,24 @@ git show [タグ名]
 ### タグ送信
 git push [リモート名] [タグ名]
 git push origin --tags
+
+### 作業一時避難(コミットしてないステージングしたもの)
+git stash
+git stash save
+避難作業一覧
+git stash list
+復元
+git stash apply
+ステージの状況も復元する場合は
+git stash apply --index
+
+### 特定の作業復元（0が一番新しい）
+git stash apply [スタッシュ名]
+
+### 作業削除
+最新
+git stash drop
+特定のもの
+git stash drop [スタッシュ名]
+全部
+git stash clear
